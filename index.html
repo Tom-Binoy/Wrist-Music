@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Gesture Music WEB APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+
+</head>
+<body>
+<center>
+  	<h3 class="title">Gesture Music WEB APP
+	    <br>
+	    <span>NOTE - Move your left-hand wrist and right-hand wrist up and down for selecting Music apparently.</span>
+  	</h3>
+    <div class="ds"><img class="img-responsive disk" src="disk.gif"><label class="diskl" id="previus">Previus Music : </label></div>
+    <button class="btn btn-info btn" id="btn" onclick="play()">Play</button>
+    <div class="dv"><img class="img-responsive disk" src="disk.gif"><label class="diskl" id="next">Next Music : </label></div>
+	<br><br>
+    <label id="now"> Now Playing :</label>
+</center>
+
+<script src="main.js"></script>
+
+</body>
+</html>
