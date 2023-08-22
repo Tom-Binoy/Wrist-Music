@@ -42,12 +42,12 @@ function setup(){
     }
 
     //loading posenet
-    //posenet = ml5.poseNet(video, modelLoaded);
-    //if(!posenet){
-    //    console.error("Error dealing with posenet.",)
-    //}
+    posenet = ml5.poseNet(video, modelLoaded);
+    if(!posenet){
+        console.error("Error dealing with posenet.",)
+    }
     try{
-    //posenet.on('pose',gotPoses)
+    posenet.on('pose',gotPoses)
     }catch (error){
         console.error("Posenet model error"+error)
     }
@@ -105,8 +105,10 @@ function song(next_or_previous)
         }
     }
     // setting up the status---here we do call check_song_no() because when we set the previous and next song we don't want to mess it
-    document.getElementById("previous").innerHTML = "Previous Song : "+music_name[check_song_no(next_music,false)];
-    document.getElementById("next").innerHTML = "Next Song : "+music_name[check_song_no(next_music,true)];
+    check_song1 = check_song_no(next_music,false);
+    check_song2 = check_song_no(next_music,true);
+    document.getElementById("previous").innerHTML = "Previous Song : "+music_name[check_song1];
+    document.getElementById("next").innerHTML = "Next Song : "+music_name[check_song2];
     document.getElementById("now").innerHTML = "Now Playing : "+music_name[song_number];
 
 
