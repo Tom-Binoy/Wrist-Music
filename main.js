@@ -79,7 +79,7 @@ function draw(){
 function song(next_or_previous)
 {
     //cheaking if the music is playing
-    is = music[sn].isPlaying;
+    is = music[song_number].isPlaying();
     if (is){
         // if so, check if the song switching is previous or next
         if(!next_or_previous)
